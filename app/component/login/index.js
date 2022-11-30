@@ -1,4 +1,4 @@
-import React, {Component} from "react";
+import React, { Component } from "react";
 import {
     StyleSheet,
     Text,
@@ -7,14 +7,18 @@ import {
     Button,
     TouchableHighlight,
     Image,
-    Alert} from "react-native";
+    Alert
+} from "react-native";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import Indicator from "../common/activity-indicator";
 import * as actions from "./actions";
 
+import { Button as ForgetPasswordBtn } from '@rneui/themed';
+
+
 class Login extends Component {
-    
+
     constructor(props) {
         super(props);
         this.state = {
@@ -27,11 +31,11 @@ class Login extends Component {
     isValid() {
         const { username, password } = this.state;
         let valid = false;
-        this.setState({error:null });
+        this.setState({ error: null });
         if (username.length > 0 && password.length > 0) {
             valid = true;
         }
-        if (username.length === 0 && password.length === 0){
+        if (username.length === 0 && password.length === 0) {
             this.setState({ error: 'You must enter an username and password' })
         } else if (username.length === 0) {
             this.setState({ error: 'You must enter an username' });
@@ -44,62 +48,66 @@ class Login extends Component {
     onLogin = () => {
         if (this.isValid()) {
             const { username, password } = this.state;
-            this.props.actions.login({username, password});
+            this.props.actions.login({ username, password });
         }
     }
 
     onClickListener = (viewId) => {
-       // Alert.alert("Alert", "Button pressed " + viewId);
+        // Alert.alert("Alert", "Button pressed " + viewId);
     }
 
 
 
-    render(){
-       return this.props.isLoadingLogin ? (<Indicator />):
-           (<View style={styles.container}>
+    render() {
+        return this.props.isLoadingLogin ? (<Indicator />) :
+            (<View style={styles.container}>
                 <Image
                     style={styles.logoImg}
                     source={require('../../assets/logo.png')}
                 />
-               <View style={styles.inputContainer}>
+                <View style={styles.inputContainer}>
                     <TextInput style={styles.inputs}
-                       placeholder="Username"
-                       autoCapitalize={'none'}
-                       returnKeyType={'next'}
-                       onSubmitEditing={() => this.passwordInput.focus()} 
-                       autoCorrect={false}
-                       underlineColorAndroid='transparent'
-                       onChangeText={(username) => this.setState({ username })} />
-               </View>
+                        placeholder="Username"
+                        autoCapitalize={'none'}
+                        returnKeyType={'next'}
+                        onSubmitEditing={() => this.passwordInput.focus()}
+                        autoCorrect={false}
+                        underlineColorAndroid='transparent'
+                        onChangeText={(username) => this.setState({ username })} />
+                </View>
 
-               <View style={styles.inputContainer}>
-                   <TextInput style={styles.inputs}
-                       placeholder="Password"
-                       ref={(input) => this.passwordInput = input} 
-                       secureTextEntry={true}
-                       returnKeyType={'done'}
-                       autoCapitalize={'none'}
-                       autoCorrect={false}
-                       underlineColorAndroid='transparent'
-                       onChangeText={(password) => this.setState({ password })} />
-               </View>
-               { this.state.error != null && 
+                <View style={styles.inputContainer}>
+                    <TextInput style={styles.inputs}
+                        placeholder="Password"
+                        ref={(input) => this.passwordInput = input}
+                        secureTextEntry={true}
+                        returnKeyType={'done'}
+                        autoCapitalize={'none'}
+                        autoCorrect={false}
+                        underlineColorAndroid='transparent'
+                        onChangeText={(password) => this.setState({ password })} />
+                </View>
+                {this.state.error != null &&
                     <Text style={styles.error}>{this.state.error}</Text>
-               }
-               <TouchableHighlight
-                    style={[styles.buttonContainer, styles.loginButton]} 
-                   onPress={this.onLogin}>
-                   <Text style={styles.loginText}>Login</Text>
-               </TouchableHighlight>
+                }
+                <TouchableHighlight
+                    style={[styles.buttonContainer, styles.loginButton]}
+                    onPress={this.onLogin}>
+                    <Text style={styles.loginText}>Login</Text>
+                </TouchableHighlight>
 
-               <TouchableHighlight 
-                    style={styles.buttonContainer}
-                    onPress={() => this.onClickListener('restore_password')}>
-                   <Text>Forgot your password?</Text>
-               </TouchableHighlight>
+                <ForgetPasswordBtn
+                    containerStyle={styles.buttonContainer}
+                    title="Forgot your password?"
+                    type="clear"
+                    titleStyle={{ color: 'rgba(78, 116, 289, 1)' }}
+                    onPress={() => this.onClickListener('restore_password')}
+                />
 
-               
-           </View>);
+
+
+
+            </View>);
     }
 }
 
@@ -123,15 +131,15 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         backgroundColor: '#DCDCDC',
     },
-    logoImg:{
-        width:100,
-        height:100,
+    logoImg: {
+        width: 100,
+        height: 100,
         marginBottom: 50
     },
-    error:{
+    error: {
         width: "80%",
-        marginBottom:20,
-        color:"red"
+        marginBottom: 20,
+        color: "red"
     },
     inputContainer: {
         borderBottomColor: '#F5FCFF',

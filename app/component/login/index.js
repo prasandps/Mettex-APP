@@ -26,7 +26,10 @@ class Login extends Component {
             password: '',
             error: null
         }
+        console.log("====> props", this.props);
     }
+
+    
 
     isValid() {
         const { username, password } = this.state;

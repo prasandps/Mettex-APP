@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, useEffect, useState } from "react";
 import {
     StyleSheet,
     Text,
@@ -11,113 +11,200 @@ import {
 } from "react-native";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
-import Indicator from "../common/activity-indicator";
 import * as actions from "./actions";
 
-import { Button as ForgetPasswordBtn } from '@rneui/themed';
+import { Button as ForgetPasswordBtn, Dialog } from '@rneui/themed';
+import { getStoredValue, setStoredValue } from "../common/storage";
+import styles from "./styles";
+import Spinner from "react-native-loading-spinner-overlay/lib";
+import DeviceInfo from 'react-native-device-info';
 
 
-class Login extends Component {
+const Login = (props) => {
+console.log("=====> props", props);
+    const [state, setState] = useState({
+        username: '6208113',
+        password: '1234567',
+        error: ''
+    });
 
-    constructor(props) {
-        super(props);
-        this.state = {
-            username: '',
-            password: '',
-            error: null
+    const [deviceInfo, setDeviceInfo] = useState({
+        imei: '',
+        mac: "",
+        os: DeviceInfo.getModel(),
+        ipaddress: "",
+        mobno: ''
+    });
+
+    const [isAlreadyRegistred, setIsAlreadyRegistred] = useState(false);
+
+    useEffect(() => {
+
+        Promise.all([
+            DeviceInfo.getUniqueId(),
+            DeviceInfo.getMacAddress(),
+            DeviceInfo.getIpAddress(),
+            DeviceInfo.getPhoneNumber()
+        ]).then((values) => {
+            setDeviceInfo({
+                ...deviceInfo,
+                imei: values[0],
+                mac: values[1] ? values[1] : 'mac-empty',
+                ipaddress: values[2] ? values[2] : 'ip-empty',
+                mobno: values[3] != 'unknown' && values[3] != '' ? values[3] : '9876543210'
+            });
+        });
+
+    }, [])
+
+    useEffect(() => {
+         if (props?.registrationData && Object.keys(props?.registrationData).length > 0) {
+            if (props.registrationData.code === '1') {
+                setIsAlreadyRegistred(true);
+             } else if(props.registrationData?.status == 'success'){
+                setStoredValue({auth_key:props.registrationData?.auth_key || ''})
+            }
+         }
+    }, [props.registrationData])
+
+    useEffect(() => {
+        if (props?.loginData && Object.keys(props?.loginData).length > 0) {
+            if(props?.loginData?.status == 'success'){
+               setStoredValue({sessionkey:props.loginData?.sessionkey || ''});
+            }
         }
-        console.log("====> props", this.props);
-    }
+   }, [props.loginData])
 
-    
 
-    isValid() {
-        const { username, password } = this.state;
+
+    isValid = () => {
+        const { username, password } = state;
         let valid = false;
-        this.setState({ error: null });
+        let error = '';
         if (username.length > 0 && password.length > 0) {
             valid = true;
         }
         if (username.length === 0 && password.length === 0) {
-            this.setState({ error: 'You must enter an username and password' })
+            error = 'You must enter an username and password';
         } else if (username.length === 0) {
-            this.setState({ error: 'You must enter an username' });
+            error = 'You must enter an username';
         } else if (password.length === 0) {
-            this.setState({ error: 'You must enter a password' });
+            error = 'You must enter a password';
         }
+        setState({
+            ...state,
+            error: error
+        });
         return valid;
     }
 
-    onLogin = () => {
-        if (this.isValid()) {
-            const { username, password } = this.state;
-            this.props.actions.login({ username, password });
+
+    const updateValue = (value, key) => {
+        let statevalue = { ...state };
+        statevalue[key] = value;
+        setState(statevalue);
+    }
+
+    const onLoginHandler = async () => {
+        if (isValid()) {
+            let localstorage = await getStoredValue();
+            console.log("=====> localstorage", localstorage);
+            if (localstorage?.auth_key && localstorage?.auth_key != '') {
+                props.actions.login({ 
+                    username: state.username, 
+                    password: state.password,
+                    authkey:localstorage.auth_key
+                });
+            } else {
+                let req = {
+                    username: state.username,
+                    password: state.password,
+                    ...deviceInfo
+                };
+                props.actions.registeration(req);
+            }
+
         }
     }
 
-    onClickListener = (viewId) => {
-        // Alert.alert("Alert", "Button pressed " + viewId);
+    const onForgetPasswordHandler = () => {
+        setStoredValue({name:"senthil"})
     }
 
+    return (<View style={styles.container}>
 
+        <Spinner
+            visible={props.isLoadingLogin}
+            textContent={'Loading...'}
+            textStyle={{ color: "#fff" }}
+            size="large"
+        />
 
-    render() {
-        return this.props.isLoadingLogin ? (<Indicator />) :
-            (<View style={styles.container}>
-                <Image
-                    style={styles.logoImg}
-                    source={require('../../assets/logo.png')}
-                />
-                <View style={styles.inputContainer}>
-                    <TextInput style={styles.inputs}
-                        placeholder="Username"
-                        autoCapitalize={'none'}
-                        returnKeyType={'next'}
-                        onSubmitEditing={() => this.passwordInput.focus()}
-                        autoCorrect={false}
-                        underlineColorAndroid='transparent'
-                        onChangeText={(username) => this.setState({ username })} />
-                </View>
+        <Dialog isVisible={isAlreadyRegistred}>
+            <Text>{props?.registrationData?.status}</Text>
+            <Dialog.Actions>
+                <Dialog.Button
+                    title="Ok"
+                    onPress={() => {
+                        setIsAlreadyRegistred(false);
+                    }} />
+            </Dialog.Actions>
+        </Dialog>
 
-                <View style={styles.inputContainer}>
-                    <TextInput style={styles.inputs}
-                        placeholder="Password"
-                        ref={(input) => this.passwordInput = input}
-                        secureTextEntry={true}
-                        returnKeyType={'done'}
-                        autoCapitalize={'none'}
-                        autoCorrect={false}
-                        underlineColorAndroid='transparent'
-                        onChangeText={(password) => this.setState({ password })} />
-                </View>
-                {this.state.error != null &&
-                    <Text style={styles.error}>{this.state.error}</Text>
-                }
-                <TouchableHighlight
-                    style={[styles.buttonContainer, styles.loginButton]}
-                    onPress={this.onLogin}>
-                    <Text style={styles.loginText}>Login</Text>
-                </TouchableHighlight>
+        <Image
+            style={styles.logoImg}
+            source={require('../../assets/logo.png')}
+        />
+        <View style={styles.inputContainer}>
+            <TextInput style={styles.inputs}
+                placeholder="Username"
+                autoCapitalize={'none'}
+                value={state.username}
+                returnKeyType={'next'}
+                onSubmitEditing={() => passwordInput.focus()}
+                autoCorrect={false}
+                underlineColorAndroid='transparent'
+                onChangeText={(username) => updateValue(username, 'username')} />
+        </View>
 
-                <ForgetPasswordBtn
-                    containerStyle={styles.buttonContainer}
-                    title="Forgot your password?"
-                    type="clear"
-                    titleStyle={{ color: 'rgba(78, 116, 289, 1)' }}
-                    onPress={() => this.onClickListener('restore_password')}
-                />
+        <View style={styles.inputContainer}>
+            <TextInput style={styles.inputs}
+                placeholder="Password"
+                ref={(input) => passwordInput = input}
+                value={state.password}
+                secureTextEntry={true}
+                returnKeyType={'done'}
+                autoCapitalize={'none'}
+                autoCorrect={false}
+                underlineColorAndroid='transparent'
+                onChangeText={(password) => updateValue(password, 'password')} />
+        </View>
+        {state.error != null &&
+            <Text style={styles.error}>{state.error}</Text>
+        }
+        <TouchableHighlight
+            style={[styles.buttonContainer, styles.loginButton]}
+            onPress={() => onLoginHandler()}>
+            <Text style={styles.loginText}>Login</Text>
+        </TouchableHighlight>
 
-
-
-
-            </View>);
-    }
+        <ForgetPasswordBtn
+            containerStyle={styles.buttonContainer}
+            title="Forgot your password?"
+            type="clear"
+            titleStyle={{ color: 'rgba(78, 116, 289, 1)' }}
+            onPress={() => onForgetPasswordHandler()}
+        />
+    </View>);
 }
+
+
 
 function mapStateToProps(state) {
     return {
         isLoadingLogin: state.login.isLoading,
-        loginData: state.login.loginData
+        loginData: state.login.loginData,
+        registrationData: state.login?.registrationData || {}
     };
 }
 
@@ -126,57 +213,6 @@ function mapDispatchToProps(dispatch) {
         actions: bindActionCreators(actions, dispatch)
     };
 }
-
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-        backgroundColor: '#DCDCDC',
-    },
-    logoImg: {
-        width: 100,
-        height: 100,
-        marginBottom: 50
-    },
-    error: {
-        width: "80%",
-        marginBottom: 20,
-        color: "red"
-    },
-    inputContainer: {
-        borderBottomColor: '#F5FCFF',
-        backgroundColor: '#FFFFFF',
-        borderRadius: 5,
-        borderBottomWidth: 1,
-        width: "80%",
-        height: 50,
-        marginBottom: 20,
-        flexDirection: 'row',
-        alignItems: 'center'
-    },
-    inputs: {
-        height: 50,
-        borderBottomColor: '#FFFFFF',
-        flex: 1,
-    },
-    buttonContainer: {
-        height: 50,
-        flexDirection: 'row',
-        justifyContent: 'center',
-        alignItems: 'center',
-        marginBottom: 20,
-        width: "80%",
-        borderRadius: 5,
-    },
-    loginButton: {
-        backgroundColor: "#00b5ec",
-    },
-    loginText: {
-        color: 'white',
-    }
-});
-
 
 export default connect(
     mapStateToProps,

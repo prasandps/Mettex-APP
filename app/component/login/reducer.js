@@ -1,34 +1,57 @@
-import { LOGIN, LOGIN_SUCCESS, LOGIN_FAILURE } from './constants';
+import { LOGIN, LOGIN_SUCCESS, LOGIN_FAILURE, REGISTERATION, REGISTERATION_SUCCESS, REGISTERATION_FAILURE } from './constants';
 
 const defaultState = {
-    loginData:{}
+    isLoading: false,
+    loginData: {},
+    registrationData:{}
+
 }
 
 export default (prevState = defaultState, action) => {
     switch (action.type) {
         case LOGIN:
             return {
-                ...defaultState,
-                isLoading:true
+                ...prevState,
+                isLoading: true
             }
-           
+
         case LOGIN_SUCCESS:
             return {
                 ...prevState,
                 loginData: action.loginData,
-                isLoading:false
+                isLoading: false
             }
-           
+
         case LOGIN_FAILURE:
             return {
                 ...prevState,
                 error: action.error,
                 isLoading: false
             }
-            
+
+        case REGISTERATION:
+            return {
+                ...prevState,
+                isLoading: true
+            }
+
+        case REGISTERATION_SUCCESS:
+            return {
+                ...prevState,
+                registrationData: action.registrationData,
+                isLoading: false
+            }
+
+        case REGISTERATION_FAILURE:
+            return {
+                ...prevState,
+                error: action.error,
+                isLoading: false
+            }
+
         default:
             return {
-                ...defaultState
+                ...prevState
             };
     }
 }

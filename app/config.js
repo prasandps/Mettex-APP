@@ -1,0 +1,1 @@
+export const BASEURL = "https://payroll.mettexlab.com/Index.php/";

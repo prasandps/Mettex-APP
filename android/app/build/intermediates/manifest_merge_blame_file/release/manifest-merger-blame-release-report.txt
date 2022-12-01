@@ -1,0 +1,106 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.mettexlab"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="21"
+8-->/Users/senthilkumar/Desktop/projects/react-native/myproject/android/app/src/main/AndroidManifest.xml
+9        android:targetSdkVersion="31" />
+9-->/Users/senthilkumar/Desktop/projects/react-native/myproject/android/app/src/main/AndroidManifest.xml
+10
+11    <uses-permission android:name="android.permission.INTERNET" />
+11-->/Users/senthilkumar/Desktop/projects/react-native/myproject/android/app/src/main/AndroidManifest.xml:4:5-67
+11-->/Users/senthilkumar/Desktop/projects/react-native/myproject/android/app/src/main/AndroidManifest.xml:4:22-64
+12    <!-- Required by older versions of Google Play services to create IID tokens -->
+13    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+13-->[com.google.android.gms:play-services-iid:17.0.0] /Users/senthilkumar/.gradle/caches/transforms-3/89eb40e51d9a03750fe3a25c96373511/transformed/jetified-play-services-iid-17.0.0/AndroidManifest.xml:23:5-82
+13-->[com.google.android.gms:play-services-iid:17.0.0] /Users/senthilkumar/.gradle/caches/transforms-3/89eb40e51d9a03750fe3a25c96373511/transformed/jetified-play-services-iid-17.0.0/AndroidManifest.xml:23:22-79
+14    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" />
+14-->[com.android.installreferrer:installreferrer:1.1.2] /Users/senthilkumar/.gradle/caches/transforms-3/318328e3183509abffbee01fc4efd067/transformed/jetified-installreferrer-1.1.2/AndroidManifest.xml:9:5-110
+14-->[com.android.installreferrer:installreferrer:1.1.2] /Users/senthilkumar/.gradle/caches/transforms-3/318328e3183509abffbee01fc4efd067/transformed/jetified-installreferrer-1.1.2/AndroidManifest.xml:9:22-107
+15
+16    <application
+16-->/Users/senthilkumar/Desktop/projects/react-native/myproject/android/app/src/main/AndroidManifest.xml:6:5-26:19
+17        android:name="com.mettexlab.MainApplication"
+17-->/Users/senthilkumar/Desktop/projects/react-native/myproject/android/app/src/main/AndroidManifest.xml:7:7-38
+18        android:allowBackup="false"
+18-->/Users/senthilkumar/Desktop/projects/react-native/myproject/android/app/src/main/AndroidManifest.xml:11:7-34
+19        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+19-->[androidx.core:core:1.7.0] /Users/senthilkumar/.gradle/caches/transforms-3/63a3df243d2d102452600006144a86df/transformed/core-1.7.0/AndroidManifest.xml:24:18-86
+20        android:icon="@mipmap/ic_launcher"
+20-->/Users/senthilkumar/Desktop/projects/react-native/myproject/android/app/src/main/AndroidManifest.xml:9:7-41
+21        android:label="@string/app_name"
+21-->/Users/senthilkumar/Desktop/projects/react-native/myproject/android/app/src/main/AndroidManifest.xml:8:7-39
+22        android:roundIcon="@mipmap/ic_launcher_round"
+22-->/Users/senthilkumar/Desktop/projects/react-native/myproject/android/app/src/main/AndroidManifest.xml:10:7-52
+23        android:theme="@style/AppTheme"
+23-->/Users/senthilkumar/Desktop/projects/react-native/myproject/android/app/src/main/AndroidManifest.xml:13:7-38
+24        android:usesCleartextTraffic="true" >
+24-->/Users/senthilkumar/Desktop/projects/react-native/myproject/android/app/src/main/AndroidManifest.xml:12:7-42
+25        <activity
+25-->/Users/senthilkumar/Desktop/projects/react-native/myproject/android/app/src/main/AndroidManifest.xml:14:7-25:18
+26            android:name="com.mettexlab.MainActivity"
+26-->/Users/senthilkumar/Desktop/projects/react-native/myproject/android/app/src/main/AndroidManifest.xml:15:9-37
+27            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize|uiMode"
+27-->/Users/senthilkumar/Desktop/projects/react-native/myproject/android/app/src/main/AndroidManifest.xml:17:9-118
+28            android:exported="true"
+28-->/Users/senthilkumar/Desktop/projects/react-native/myproject/android/app/src/main/AndroidManifest.xml:20:9-32
+29            android:label="@string/app_name"
+29-->/Users/senthilkumar/Desktop/projects/react-native/myproject/android/app/src/main/AndroidManifest.xml:16:9-41
+30            android:launchMode="singleTask"
+30-->/Users/senthilkumar/Desktop/projects/react-native/myproject/android/app/src/main/AndroidManifest.xml:18:9-40
+31            android:windowSoftInputMode="adjustResize" >
+31-->/Users/senthilkumar/Desktop/projects/react-native/myproject/android/app/src/main/AndroidManifest.xml:19:9-51
+32            <intent-filter>
+32-->/Users/senthilkumar/Desktop/projects/react-native/myproject/android/app/src/main/AndroidManifest.xml:21:9-24:25
+33                <action android:name="android.intent.action.MAIN" />
+33-->/Users/senthilkumar/Desktop/projects/react-native/myproject/android/app/src/main/AndroidManifest.xml:22:13-65
+33-->/Users/senthilkumar/Desktop/projects/react-native/myproject/android/app/src/main/AndroidManifest.xml:22:21-62
+34
+35                <category android:name="android.intent.category.LAUNCHER" />
+35-->/Users/senthilkumar/Desktop/projects/react-native/myproject/android/app/src/main/AndroidManifest.xml:23:13-73
+35-->/Users/senthilkumar/Desktop/projects/react-native/myproject/android/app/src/main/AndroidManifest.xml:23:23-70
+36            </intent-filter>
+37        </activity>
+38        <activity
+38-->[com.google.android.gms:play-services-base:17.0.0] /Users/senthilkumar/.gradle/caches/transforms-3/37f8ffa3ec488a48f4844b49ea25bc5d/transformed/jetified-play-services-base-17.0.0/AndroidManifest.xml:23:9-26:75
+39            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+39-->[com.google.android.gms:play-services-base:17.0.0] /Users/senthilkumar/.gradle/caches/transforms-3/37f8ffa3ec488a48f4844b49ea25bc5d/transformed/jetified-play-services-base-17.0.0/AndroidManifest.xml:24:13-79
+40            android:exported="false"
+40-->[com.google.android.gms:play-services-base:17.0.0] /Users/senthilkumar/.gradle/caches/transforms-3/37f8ffa3ec488a48f4844b49ea25bc5d/transformed/jetified-play-services-base-17.0.0/AndroidManifest.xml:25:13-37
+41            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+41-->[com.google.android.gms:play-services-base:17.0.0] /Users/senthilkumar/.gradle/caches/transforms-3/37f8ffa3ec488a48f4844b49ea25bc5d/transformed/jetified-play-services-base-17.0.0/AndroidManifest.xml:26:13-72
+42
+43        <meta-data
+43-->[com.google.android.gms:play-services-basement:17.0.0] /Users/senthilkumar/.gradle/caches/transforms-3/c0b86808731a4a9f10bb9c1bec75b274/transformed/jetified-play-services-basement-17.0.0/AndroidManifest.xml:23:9-25:69
+44            android:name="com.google.android.gms.version"
+44-->[com.google.android.gms:play-services-basement:17.0.0] /Users/senthilkumar/.gradle/caches/transforms-3/c0b86808731a4a9f10bb9c1bec75b274/transformed/jetified-play-services-basement-17.0.0/AndroidManifest.xml:24:13-58
+45            android:value="@integer/google_play_services_version" />
+45-->[com.google.android.gms:play-services-basement:17.0.0] /Users/senthilkumar/.gradle/caches/transforms-3/c0b86808731a4a9f10bb9c1bec75b274/transformed/jetified-play-services-basement-17.0.0/AndroidManifest.xml:25:13-66
+46
+47        <provider
+47-->[androidx.emoji2:emoji2:1.0.0] /Users/senthilkumar/.gradle/caches/transforms-3/b6fe4da57007a43d86a66ba4c66459bd/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:26:9-34:20
+48            android:name="androidx.startup.InitializationProvider"
+48-->[androidx.emoji2:emoji2:1.0.0] /Users/senthilkumar/.gradle/caches/transforms-3/b6fe4da57007a43d86a66ba4c66459bd/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:27:13-67
+49            android:authorities="com.mettexlab.androidx-startup"
+49-->[androidx.emoji2:emoji2:1.0.0] /Users/senthilkumar/.gradle/caches/transforms-3/b6fe4da57007a43d86a66ba4c66459bd/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:28:13-68
+50            android:exported="false" >
+50-->[androidx.emoji2:emoji2:1.0.0] /Users/senthilkumar/.gradle/caches/transforms-3/b6fe4da57007a43d86a66ba4c66459bd/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:29:13-37
+51            <meta-data
+51-->[androidx.emoji2:emoji2:1.0.0] /Users/senthilkumar/.gradle/caches/transforms-3/b6fe4da57007a43d86a66ba4c66459bd/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:31:13-33:52
+52                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+52-->[androidx.emoji2:emoji2:1.0.0] /Users/senthilkumar/.gradle/caches/transforms-3/b6fe4da57007a43d86a66ba4c66459bd/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:32:17-75
+53                android:value="androidx.startup" />
+53-->[androidx.emoji2:emoji2:1.0.0] /Users/senthilkumar/.gradle/caches/transforms-3/b6fe4da57007a43d86a66ba4c66459bd/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:33:17-49
+54            <meta-data
+54-->[androidx.lifecycle:lifecycle-process:2.4.0] /Users/senthilkumar/.gradle/caches/transforms-3/bc74a39e1ea23fea00bfcf2682a93948/transformed/jetified-lifecycle-process-2.4.0/AndroidManifest.xml:31:13-33:52
+55                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+55-->[androidx.lifecycle:lifecycle-process:2.4.0] /Users/senthilkumar/.gradle/caches/transforms-3/bc74a39e1ea23fea00bfcf2682a93948/transformed/jetified-lifecycle-process-2.4.0/AndroidManifest.xml:32:17-78
+56                android:value="androidx.startup" />
+56-->[androidx.lifecycle:lifecycle-process:2.4.0] /Users/senthilkumar/.gradle/caches/transforms-3/bc74a39e1ea23fea00bfcf2682a93948/transformed/jetified-lifecycle-process-2.4.0/AndroidManifest.xml:33:17-49
+57        </provider>
+58    </application>
+59
+60</manifest>

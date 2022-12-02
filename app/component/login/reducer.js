@@ -1,14 +1,21 @@
-import { LOGIN, LOGIN_SUCCESS, LOGIN_FAILURE, REGISTERATION, REGISTERATION_SUCCESS, REGISTERATION_FAILURE } from './constants';
+import { LOGIN, LOGIN_SUCCESS, LOGIN_FAILURE, REGISTERATION, REGISTERATION_SUCCESS, REGISTERATION_FAILURE, VALID_SESSION } from './constants';
 
 const defaultState = {
     isLoading: false,
     loginData: {},
-    registrationData:{}
-
+    registrationData:{},
+    isValidSession:false
 }
 
 export default (prevState = defaultState, action) => {
     switch (action.type) {
+        case VALID_SESSION:
+            console.log("=== action", action);
+            return {
+                ...prevState,
+                isValidSession:action.isValidSession
+            }
+
         case LOGIN:
             return {
                 ...prevState,

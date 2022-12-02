@@ -17,6 +17,10 @@ import com.reactnativecommunity.asyncstorage.AsyncStoragePackage;
 import com.learnium.RNDeviceInfo.RNDeviceInfo;
 // react-native-safe-area-context
 import com.th3rdwave.safeareacontext.SafeAreaContextPackage;
+// react-native-screens
+import com.swmansion.rnscreens.RNScreensPackage;
+// react-native-splash-screen
+import org.devio.rn.splashscreen.SplashScreenReactPackage;
 // react-native-vector-icons
 import com.oblador.vectoricons.VectorIconsPackage;
 
@@ -67,6 +71,8 @@ public class PackageList {
       new AsyncStoragePackage(),
       new RNDeviceInfo(),
       new SafeAreaContextPackage(),
+      new RNScreensPackage(),
+      new SplashScreenReactPackage(),
       new VectorIconsPackage()
     ));
   }

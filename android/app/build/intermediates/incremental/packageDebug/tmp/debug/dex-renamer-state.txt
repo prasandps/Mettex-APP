@@ -1,8 +1,10 @@
-#Thu Dec 01 21:22:39 IST 2022
+#Fri Dec 02 16:34:16 IST 2022
 path.4=3/classes.dex
 path.3=14/classes.dex
 path.2=0/classes.dex
 path.1=0/classes.dex
+renamed.8=classes9.dex
+path.8=classes2.dex
 path.7=9/classes.dex
 path.6=7/classes.dex
 path.5=6/classes.dex
@@ -17,6 +19,7 @@ renamed.2=classes3.dex
 renamed.1=classes2.dex
 renamed.0=classes.dex
 renamed.7=classes8.dex
+base.8=/Users/senthilkumar/Desktop/projects/react-native/myproject/android/app/build/intermediates/dex/debug/mergeExtDexDebug/classes2.dex
 renamed.6=classes7.dex
 base.7=/Users/senthilkumar/Desktop/projects/react-native/myproject/android/app/build/intermediates/dex/debug/mergeProjectDexDebug/9/classes.dex
 renamed.5=classes6.dex

@@ -1,4 +1,4 @@
-import { LOGIN, LOGIN_SUCCESS, LOGIN_FAILURE, REGISTERATION, REGISTERATION_SUCCESS, REGISTERATION_FAILURE } from "./constants";
+import { LOGIN, LOGIN_SUCCESS, LOGIN_FAILURE, REGISTERATION, REGISTERATION_SUCCESS, REGISTERATION_FAILURE, VALID_SESSION } from "./constants";
 
 export function login(data) {
     return {
@@ -40,5 +40,12 @@ export function registerationFailure(error) {
     return {
         type: REGISTERATION_FAILURE,
         error
+    }
+}
+
+export function validSession(isValidSession) {
+    return {
+        type: VALID_SESSION,
+        isValidSession
     }
 }

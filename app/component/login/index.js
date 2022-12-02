@@ -20,8 +20,9 @@ import Spinner from "react-native-loading-spinner-overlay/lib";
 import DeviceInfo from 'react-native-device-info';
 
 
-const Login = (props) => {
-console.log("=====> props", props);
+const LoginComponent = (props) => {
+
+   
     const [state, setState] = useState({
         username: '6208113',
         password: '1234567',
@@ -62,7 +63,13 @@ console.log("=====> props", props);
             if (props.registrationData.code === '1') {
                 setIsAlreadyRegistred(true);
              } else if(props.registrationData?.status == 'success'){
-                setStoredValue({auth_key:props.registrationData?.auth_key || ''})
+                setStoredValue({
+                    username:state.username,
+                    auth_key:props.registrationData?.auth_key || '',
+                });
+                setTimeout(() => {
+                    onLoginHandler();
+                }, 1000);
             }
          }
     }, [props.registrationData])
@@ -71,6 +78,7 @@ console.log("=====> props", props);
         if (props?.loginData && Object.keys(props?.loginData).length > 0) {
             if(props?.loginData?.status == 'success'){
                setStoredValue({sessionkey:props.loginData?.sessionkey || ''});
+               props.actions.validSession(true);
             }
         }
    }, [props.loginData])
@@ -108,7 +116,6 @@ console.log("=====> props", props);
     const onLoginHandler = async () => {
         if (isValid()) {
             let localstorage = await getStoredValue();
-            console.log("=====> localstorage", localstorage);
             if (localstorage?.auth_key && localstorage?.auth_key != '') {
                 props.actions.login({ 
                     username: state.username, 
@@ -128,7 +135,7 @@ console.log("=====> props", props);
     }
 
     const onForgetPasswordHandler = () => {
-        setStoredValue({name:"senthil"})
+     
     }
 
     return (<View style={styles.container}>
@@ -217,4 +224,4 @@ function mapDispatchToProps(dispatch) {
 export default connect(
     mapStateToProps,
     mapDispatchToProps
-)(Login);
+)(LoginComponent);

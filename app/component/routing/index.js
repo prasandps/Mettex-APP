@@ -53,7 +53,7 @@ const RoutingComponent = (props) => {
       <Stack.Navigator>
         {props.isLoading === false && props.isValidSession === true && (
           <Stack.Group>
-            <Stack.Screen name="Home" component={DrawerNavigator} options={{headerShown: false}}/>
+            <Stack.Screen name="Drawer" component={DrawerNavigator} options={{headerShown: false}}/>
           </Stack.Group>
         )}
         {props.isLoading === false &&  props.isValidSession === false && (

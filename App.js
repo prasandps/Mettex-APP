@@ -5,6 +5,7 @@ import { Provider } from 'react-redux';
 import configureStore from "./app/store/config-store";
 import RoutingComponent from './app/component/routing/index'
 import SplashScreen from 'react-native-splash-screen'
+import 'react-native-gesture-handler';
 
 const App = () => {
 

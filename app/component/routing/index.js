@@ -1,14 +1,13 @@
 import { useEffect, useState } from "react";
 import { getStoredValue } from "../common/storage";
 import LoginComponent from './../login/index';
-import HomeComponent from './../home/index';
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import * as actions from "./actions";
 import * as loginActions from "./../login/actions";
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { ActivityIndicator, View } from "react-native";
+import DrawerNavigator from "./DrawerNavigator";
 
 let Stack = createNativeStackNavigator();
 
@@ -54,7 +53,7 @@ const RoutingComponent = (props) => {
       <Stack.Navigator>
         {props.isLoading === false && props.isValidSession === true && (
           <Stack.Group>
-            <Stack.Screen  name="Home" component={HomeComponent} />
+            <Stack.Screen name="Home" component={DrawerNavigator} options={{headerShown: false}}/>
           </Stack.Group>
         )}
         {props.isLoading === false &&  props.isValidSession === false && (
@@ -63,6 +62,7 @@ const RoutingComponent = (props) => {
           </Stack.Group>
         )}
       </Stack.Navigator>
+     
     </NavigationContainer>
 
    

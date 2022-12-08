@@ -4,7 +4,7 @@ import { View } from "react-native";
 const LoanComponent = () => {
     return(
         <View>
-            <Text>Loan Component</Text>
+            <Text>Loan Component Comming soon !!!</Text>
         </View>
     )
 }

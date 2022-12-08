@@ -1,0 +1,9 @@
+export const PUNCH_IN  = "PUNCH_IN";
+export const PUNCH_IN_SUCCESS = "PUNCH_IN_SUCCESS";
+export const PUNCH_IN_FAILURE = "PUNCH_IN_FAILURE";
+export const PUNCH_IN_DATA_CLEAR = "PUNCH_IN_DATA_CLEAR";
+
+export const PUNCH_OUT  = "PUNCH_OUT";
+export const PUNCH_OUT_SUCCESS = "PUNCH_OUT_SUCCESS";
+export const PUNCH_OUT_FAILURE = "PUNCH_OUT_FAILURE";
+export const PUNCH_OUT_DATA_CLEAR = 'PUNCH_OUT_DATA_CLEAR';

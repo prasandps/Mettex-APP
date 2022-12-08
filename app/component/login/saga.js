@@ -16,10 +16,6 @@ function* loginActon(data) {
      } catch (e) {
         yield put(actions.loginFailure("login error"))
      }
-
-    const success = { success:"login success"};
-    yield delay(2000);
-    yield put(actions.loginSuccess(success));
 }
 
 function* RegistrationActon(data){

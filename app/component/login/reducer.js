@@ -10,7 +10,6 @@ const defaultState = {
 export default (prevState = defaultState, action) => {
     switch (action.type) {
         case VALID_SESSION:
-            console.log("=== action", action);
             return {
                 ...prevState,
                 isValidSession:action.isValidSession

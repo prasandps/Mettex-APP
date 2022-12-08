@@ -4,7 +4,7 @@ import { View } from "react-native";
 const LeaveComponent = () => {
     return(
         <View>
-            <Text>Leave Component</Text>
+            <Text>Leave Component Comming Soon!!!</Text>
         </View>
     )
 }

@@ -17,6 +17,7 @@ const DrawerNavigator = () => {
             <Drawer.Screen name="Claim" component={ClaimComponent}/>
             <Drawer.Screen name="Loan" component={LoanComponent}/>
             <Drawer.Screen name="Leave" component={LeaveComponent}/>
+            
         </Drawer.Navigator>);
     
 

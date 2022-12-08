@@ -1,4 +1,4 @@
-import { CHECK_SESSION, CHECK_SESSION_FAILURE, CHECK_SESSION_SUCCESS } from './constants';
+import { CHECK_SESSION, CHECK_SESSION_FAILURE, CHECK_SESSION_SUCCESS, CLEAR_SESSION } from './constants';
 
 const defaultState = {
     isLoading: false,
@@ -26,6 +26,12 @@ export default (prevState = defaultState, action) => {
                 ...prevState,
                 error: action.error,
                 isLoading: false
+            }
+        
+        case CLEAR_SESSION:
+            return {
+                ...prevState,
+                sessionData:{}
             }
 
         default:

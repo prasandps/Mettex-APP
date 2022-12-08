@@ -14,8 +14,11 @@ import {
   DrawerItemList,
   DrawerItem,
 } from '@react-navigation/drawer';
-import { Avatar } from '@rneui/themed';
- 
+import { connect } from "react-redux";
+import { bindActionCreators } from "redux";
+import * as loginActions from "./../login/actions";
+import * as actions from "./actions";
+
 const CustomSidebarMenu = (props) => {
   const BASE_PATH =
     'https://raw.githubusercontent.com/AboutReact/sampleresource/master/';
@@ -29,6 +32,18 @@ const CustomSidebarMenu = (props) => {
       />
       <DrawerContentScrollView {...props}>
         <DrawerItemList {...props} />
+        <View style={{flex:1}}>
+          {/* here's where you put your logout drawer item*/}
+          <DrawerItem 
+            label="Log out"
+            onPress={()=>{
+              props.loginActions.validSession(false);
+              props.actions.clearSession();
+              props.navigation.replace("Login");
+            }}
+            style={{flex:1,justifyContent:'flex-end'}}
+          />
+        </View>
       </DrawerContentScrollView>
     </SafeAreaView>
   );
@@ -54,4 +69,22 @@ const styles = StyleSheet.create({
   },
 });
  
-export default CustomSidebarMenu;
+
+
+const mapStateToProps = (state) => {
+  return {
+    
+  };
+}
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    loginActions: bindActionCreators(loginActions, dispatch),
+    actions: bindActionCreators(actions, dispatch)
+  };
+}
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(CustomSidebarMenu);

@@ -1,4 +1,4 @@
-import { CHECK_SESSION, CHECK_SESSION_FAILURE, CHECK_SESSION_SUCCESS } from "./constants";
+import { CHECK_SESSION, CHECK_SESSION_FAILURE, CHECK_SESSION_SUCCESS, CLEAR_SESSION } from "./constants";
 
 export function checkSession(data) {
     return {
@@ -21,3 +21,9 @@ export function checkSessionFailure(error) {
     }
 }
 
+
+export function clearSession() {
+    return {
+        type: CLEAR_SESSION
+    }
+}

@@ -10,10 +10,14 @@ import { bindActionCreators } from "redux";
 import * as actions from "./actions";
 import dateFormat from '../common/dateFormat';
 import Spinner from 'react-native-loading-spinner-overlay/lib';
-
+import { useIsConnected } from 'react-native-offline';
 
 
 const AttendanceComponent = (props) => {
+
+    const isConnected = useIsConnected();
+
+    console.log("=====> isConnected", isConnected)
 
     const [coordinate, setCoordinate] = useState({
         latitude: 11.1271,
@@ -43,7 +47,15 @@ const AttendanceComponent = (props) => {
       }
     }, [isVisible])
     
+    // if(isConnected === true){
+    //     const updateDataToServer = async() => {
+    //         let localstoreVal = await getStoredValue();
+    //         if(localstoreVal.punchInData && localstorage.punchInData.length>0){
 
+    //         }
+    //     }
+    //     updateDataToServer();
+    // }
 
     const getLocalStoreVal = async () => {
         let localstoreVal = await getStoredValue();
@@ -97,7 +109,20 @@ const AttendanceComponent = (props) => {
             longitude: coordinate.longitude,
             datetime: dateFormat(new Date())
         }
-        props.actions.punchIn(req);
+        if(isConnected === false){
+            let punchInData  = [];
+            if(localstoreVal?.punchInData){
+                punchInData = [...localstoreVal?.punchInData];
+            }
+            punchInData.push(req);
+            setStoredValue({
+                punchInData:punchInData,
+                punch_in_sync_id:'offline'});
+            setIsPunchInBtnDisable(!isPunchInBtnDisable);
+        } else {
+            props.actions.punchIn(req);
+        }
+        
 
     }
 
@@ -111,7 +136,21 @@ const AttendanceComponent = (props) => {
             datetime: dateFormat(new Date()),
             sync_id: localstoreVal.punch_in_sync_id
         }
-        props.actions.punchOut(req);
+        if(isConnected === false){
+            let punchOutData  = [];
+            if(localstoreVal?.punchOutData){
+                punchOutData = [...localstoreVal?.punchOutData];
+            }
+            punchOutData.push(req);
+            setStoredValue({
+                punchOutData:punchOutData,
+                punch_in_sync_id:''
+            });
+            setIsPunchInBtnDisable(!isPunchInBtnDisable);
+         } else {
+            props.actions.punchOut(req);
+        }
+        
     }
 
     useEffect(() => {

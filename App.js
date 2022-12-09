@@ -6,6 +6,7 @@ import configureStore from "./app/store/config-store";
 import RoutingComponent from './app/component/routing/index'
 import SplashScreen from 'react-native-splash-screen'
 import 'react-native-gesture-handler';
+import { NetworkProvider } from 'react-native-offline';
 
 const App = () => {
 
@@ -20,7 +21,9 @@ const App = () => {
  
   return (
     <Provider store={store}> 
-       <RoutingComponent/>
+      <NetworkProvider>
+        <RoutingComponent/>
+      </NetworkProvider>
     </Provider>
   );
 };

@@ -18,11 +18,12 @@ import { getStoredValue, setStoredValue } from "../common/storage";
 import styles from "./styles";
 import Spinner from "react-native-loading-spinner-overlay/lib";
 import DeviceInfo from 'react-native-device-info';
+import { useIsConnected } from 'react-native-offline';
 
 
 const LoginComponent = (props) => {
+    const isConnected = useIsConnected();
 
-   
     const [state, setState] = useState({
         username: '6208113',
         password: '1234567',
@@ -36,6 +37,11 @@ const LoginComponent = (props) => {
         ipaddress: "",
         mobno: ''
     });
+
+    const [loginErrorInfo, setLoginErrorInfo] = useState({
+        isShowLoginError:false,
+        errorInfo:""
+    })
 
     const [isAlreadyRegistred, setIsAlreadyRegistred] = useState(false);
 
@@ -69,7 +75,7 @@ const LoginComponent = (props) => {
                 });
                 setTimeout(() => {
                     onLoginHandler();
-                }, 1000);
+                }, 100);
             }
          }
     }, [props.registrationData])
@@ -77,8 +83,25 @@ const LoginComponent = (props) => {
     useEffect(() => {
         if (props?.loginData && Object.keys(props?.loginData).length > 0) {
             if(props?.loginData?.status == 'success'){
-               setStoredValue({sessionkey:props.loginData?.sessionkey || ''});
+               setStoredValue({
+                sessionkey:props.loginData?.sessionkey || '',
+                isLogout:false
+            });
                props.actions.validSession(true);
+            } else if(props?.loginData?.code ==3){
+                setStoredValue({
+                    username:'',
+                    auth_key:'',
+                    sessionkey:''
+                });
+                setTimeout(() => {
+                    onLoginHandler();
+                }, 500);
+            } else if(props?.loginData?.status != 'success'){
+                setLoginErrorInfo({
+                    isShowLoginError:true,
+                    errorInfo:props?.loginData?.status 
+                })
             }
         }
    }, [props.loginData])
@@ -117,11 +140,16 @@ const LoginComponent = (props) => {
         if (isValid()) {
             let localstorage = await getStoredValue();
             if (localstorage?.auth_key && localstorage?.auth_key != '') {
-                props.actions.login({ 
-                    username: state.username, 
-                    password: state.password,
-                    authkey:localstorage.auth_key
-                });
+                if(isConnected === false && localstorage?.sessionkey != ''){
+                    props.actions.validSession(true);
+                } else {
+                    props.actions.login({ 
+                        username: state.username, 
+                        password: state.password,
+                        authkey:localstorage.auth_key
+                    });
+                }
+               
             } else {
                 let req = {
                     username: state.username,
@@ -157,7 +185,22 @@ const LoginComponent = (props) => {
                     }} />
             </Dialog.Actions>
         </Dialog>
+        <Dialog isVisible={loginErrorInfo.isShowLoginError}>
+            <Text>{loginErrorInfo?.errorInfo}</Text>
+            <Dialog.Actions>
+                <Dialog.Button
+                    title="Ok"
+                    onPress={() => {
+                        setLoginErrorInfo({
+                            ...loginErrorInfo,
+                            isShowLoginError:false
+                        });
+                        
+                    }} />
+            </Dialog.Actions>
+        </Dialog>
 
+        
         <Image
             style={styles.logoImg}
             source={require('../../assets/logo.png')}

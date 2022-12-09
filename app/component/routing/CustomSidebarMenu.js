@@ -18,6 +18,7 @@ import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import * as loginActions from "./../login/actions";
 import * as actions from "./actions";
+import { setStoredValue } from '../common/storage';
 
 const CustomSidebarMenu = (props) => {
   const BASE_PATH =
@@ -37,6 +38,9 @@ const CustomSidebarMenu = (props) => {
           <DrawerItem 
             label="Log out"
             onPress={()=>{
+              setStoredValue({
+                isLogout:true
+              });
               props.loginActions.validSession(false);
               props.actions.clearSession();
               props.navigation.replace("Login");

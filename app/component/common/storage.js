@@ -6,7 +6,7 @@ import AsyncStorage from "@react-native-async-storage/async-storage"
       const jsonValue = await AsyncStorage.getItem('root')
       let returnval = jsonValue != null ? JSON.parse(jsonValue) : null;
       if(returnval == null){
-        setStoredValue({name:"Mettexlab"})
+        setStoredValue({name:"Mettexlab", isLogout:false})
       } 
       return returnval;
     } catch(e) {}

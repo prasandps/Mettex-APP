@@ -11,6 +11,7 @@ MERGED from [com.facebook.flipper:flipper-fresco-plugin:0.125.0] /Users/senthilk
 MERGED from [:react-native-splash-screen] /Users/senthilkumar/Desktop/projects/react-native/myproject/node_modules/react-native-splash-screen/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-9:12
 MERGED from [:react-native-async-storage_async-storage] /Users/senthilkumar/Desktop/projects/react-native/myproject/node_modules/@react-native-async-storage/async-storage/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-9:12
 MERGED from [:react-native-community_geolocation] /Users/senthilkumar/Desktop/projects/react-native/myproject/node_modules/@react-native-community/geolocation/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-9:12
+MERGED from [:react-native-community_netinfo] /Users/senthilkumar/Desktop/projects/react-native/myproject/node_modules/@react-native-community/netinfo/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-12:12
 MERGED from [:react-native-device-info] /Users/senthilkumar/Desktop/projects/react-native/myproject/node_modules/react-native-device-info/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-9:12
 MERGED from [:react-native-geolocation-service] /Users/senthilkumar/Desktop/projects/react-native/myproject/node_modules/react-native-geolocation-service/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-9:12
 MERGED from [:react-native-gesture-handler] /Users/senthilkumar/Desktop/projects/react-native/myproject/node_modules/react-native-gesture-handler/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-9:12
@@ -129,6 +130,8 @@ ADDED from /Users/senthilkumar/Desktop/projects/react-native/myproject/android/a
 		ADDED from /Users/senthilkumar/Desktop/projects/react-native/myproject/android/app/src/main/AndroidManifest.xml:5:22-72
 uses-permission#android.permission.ACCESS_NETWORK_STATE
 ADDED from /Users/senthilkumar/Desktop/projects/react-native/myproject/android/app/src/main/AndroidManifest.xml:6:5-79
+MERGED from [:react-native-community_netinfo] /Users/senthilkumar/Desktop/projects/react-native/myproject/node_modules/@react-native-community/netinfo/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-79
+MERGED from [:react-native-community_netinfo] /Users/senthilkumar/Desktop/projects/react-native/myproject/node_modules/@react-native-community/netinfo/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-79
 MERGED from [androidx.work:work-runtime:2.7.1] /Users/senthilkumar/.gradle/caches/transforms-3/3bc811facf50ede55bc8298072e0374d/transformed/work-runtime-2.7.1/AndroidManifest.xml:26:5-79
 MERGED from [androidx.work:work-runtime:2.7.1] /Users/senthilkumar/.gradle/caches/transforms-3/3bc811facf50ede55bc8298072e0374d/transformed/work-runtime-2.7.1/AndroidManifest.xml:26:5-79
 MERGED from [com.google.android.gms:play-services-maps:18.0.2] /Users/senthilkumar/.gradle/caches/transforms-3/5b94eed69c74e072e7c17c8facb87462/transformed/jetified-play-services-maps-18.0.2/AndroidManifest.xml:23:5-79
@@ -139,6 +142,8 @@ uses-permission#android.permission.ACCESS_WIFI_STATE
 ADDED from /Users/senthilkumar/Desktop/projects/react-native/myproject/android/app/src/main/AndroidManifest.xml:7:5-76
 MERGED from [com.facebook.flipper:flipper:0.125.0] /Users/senthilkumar/.gradle/caches/transforms-3/03f04a3f11198ce3b7c6cedb9b41266b/transformed/jetified-flipper-0.125.0/AndroidManifest.xml:16:5-76
 MERGED from [com.facebook.flipper:flipper:0.125.0] /Users/senthilkumar/.gradle/caches/transforms-3/03f04a3f11198ce3b7c6cedb9b41266b/transformed/jetified-flipper-0.125.0/AndroidManifest.xml:16:5-76
+MERGED from [:react-native-community_netinfo] /Users/senthilkumar/Desktop/projects/react-native/myproject/node_modules/@react-native-community/netinfo/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:10:5-76
+MERGED from [:react-native-community_netinfo] /Users/senthilkumar/Desktop/projects/react-native/myproject/node_modules/@react-native-community/netinfo/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:10:5-76
 	android:name
 		ADDED from /Users/senthilkumar/Desktop/projects/react-native/myproject/android/app/src/main/AndroidManifest.xml:7:22-73
 uses-permission#android.permission.ACCESS_COARSE_LOCATION
@@ -275,6 +280,8 @@ MERGED from [:react-native-async-storage_async-storage] /Users/senthilkumar/Desk
 MERGED from [:react-native-async-storage_async-storage] /Users/senthilkumar/Desktop/projects/react-native/myproject/node_modules/@react-native-async-storage/async-storage/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-community_geolocation] /Users/senthilkumar/Desktop/projects/react-native/myproject/node_modules/@react-native-community/geolocation/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-community_geolocation] /Users/senthilkumar/Desktop/projects/react-native/myproject/node_modules/@react-native-community/geolocation/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-community_netinfo] /Users/senthilkumar/Desktop/projects/react-native/myproject/node_modules/@react-native-community/netinfo/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-community_netinfo] /Users/senthilkumar/Desktop/projects/react-native/myproject/node_modules/@react-native-community/netinfo/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-device-info] /Users/senthilkumar/Desktop/projects/react-native/myproject/node_modules/react-native-device-info/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-device-info] /Users/senthilkumar/Desktop/projects/react-native/myproject/node_modules/react-native-device-info/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-geolocation-service] /Users/senthilkumar/Desktop/projects/react-native/myproject/node_modules/react-native-geolocation-service/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41

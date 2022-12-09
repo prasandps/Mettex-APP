@@ -8,6 +8,7 @@ import * as loginActions from "./../login/actions";
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import DrawerNavigator from "./DrawerNavigator";
+import Spinner from "react-native-loading-spinner-overlay/lib";
 
 let Stack = createNativeStackNavigator();
 
@@ -27,12 +28,12 @@ const RoutingComponent = (props) => {
 
   useEffect(() => {
 
-    if (localstore && localstore?.auth_key != '' && localstore.sessionkey) {
-      // props.actions.checkSession({
-      //   username: localstore?.username,
-      //   authkey: localstore?.auth_key,
-      //   sessionkey: localstore?.sessionkey
-      // });
+    if (localstore && localstore?.auth_key != '' && localstore.sessionkey && localstore.isLogout === false) {
+      props.actions.checkSession({
+        username: localstore?.username,
+        authkey: localstore?.auth_key,
+        sessionkey: localstore?.sessionkey
+      });
     }
 
   }, [localstore]);
@@ -46,27 +47,38 @@ const RoutingComponent = (props) => {
   }, [props.sessionData])
 
 
+  if (props.isLoading === false) {
+    return (
 
-  return (
-   
-    <NavigationContainer>
-      <Stack.Navigator>
-        {props.isLoading === false && props.isValidSession === true && (
-          <Stack.Group>
-            <Stack.Screen name="Drawer" component={DrawerNavigator} options={{headerShown: false}}/>
-          </Stack.Group>
-        )}
-        {props.isLoading === false &&  props.isValidSession === false && (
-          <Stack.Group>
-            <Stack.Screen options={{headerShown: false}}  name="Login" component={LoginComponent} />
-          </Stack.Group>
-        )}
-      </Stack.Navigator>
-     
-    </NavigationContainer>
+      <NavigationContainer>
+        <Stack.Navigator>
+          {props.isLoading === false && props.isValidSession === true && (
+            <Stack.Group>
+              <Stack.Screen name="Drawer" component={DrawerNavigator} options={{ headerShown: false }} />
+            </Stack.Group>
+          )}
+          {props.isLoading === false && props.isValidSession === false && (
+            <Stack.Group>
+              <Stack.Screen options={{ headerShown: false }} name="Login" component={LoginComponent} />
+            </Stack.Group>
+          )}
+        </Stack.Navigator>
 
-   
-  )
+      </NavigationContainer>
+
+
+    )
+  }
+  if (props.isLoading === true) {
+    return (
+      <Spinner
+        visible={true}
+        textContent={'Loading...'}
+        textStyle={{ color: "#fff" }}
+        size="large"
+      />
+    )
+  }
 
 }
 

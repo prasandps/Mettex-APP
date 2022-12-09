@@ -9,12 +9,29 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import DrawerNavigator from "./DrawerNavigator";
 import Spinner from "react-native-loading-spinner-overlay/lib";
+import { useIsConnected } from 'react-native-offline';
+import Toast from 'react-native-toast-message';
 
 let Stack = createNativeStackNavigator();
 
 const RoutingComponent = (props) => {
+  
+  const isConnected = useIsConnected();
 
   const [localstore, setLocalstore] = useState({});
+
+  useEffect(() => {
+    if(isConnected == false){
+        Toast.show({
+          type: 'error',
+          text1: 'Network',
+          text2: 'Please connect the network'
+        });
+    }
+  }, [isConnected])
+  
+
+  
 
   useEffect(() => {
 
@@ -51,6 +68,7 @@ const RoutingComponent = (props) => {
     return (
 
       <NavigationContainer>
+        
         <Stack.Navigator>
           {props.isLoading === false && props.isValidSession === true && (
             <Stack.Group>

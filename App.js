@@ -7,6 +7,7 @@ import RoutingComponent from './app/component/routing/index'
 import SplashScreen from 'react-native-splash-screen'
 import 'react-native-gesture-handler';
 import { NetworkProvider } from 'react-native-offline';
+import Toast from 'react-native-toast-message';
 
 const App = () => {
 
@@ -23,6 +24,7 @@ const App = () => {
     <Provider store={store}> 
       <NetworkProvider>
         <RoutingComponent/>
+        <Toast />
       </NetworkProvider>
     </Provider>
   );

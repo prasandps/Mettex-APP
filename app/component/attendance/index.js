@@ -109,19 +109,19 @@ const AttendanceComponent = (props) => {
             longitude: coordinate.longitude,
             datetime: dateFormat(new Date())
         }
-        if(isConnected === false){
-            let punchInData  = [];
-            if(localstoreVal?.punchInData){
-                punchInData = [...localstoreVal?.punchInData];
-            }
-            punchInData.push(req);
-            setStoredValue({
-                punchInData:punchInData,
-                punch_in_sync_id:'offline'});
-            setIsPunchInBtnDisable(!isPunchInBtnDisable);
-        } else {
+        // if(isConnected === false){
+        //     let punchInData  = [];
+        //     if(localstoreVal?.punchInData){
+        //         punchInData = [...localstoreVal?.punchInData];
+        //     }
+        //     punchInData.push(req);
+        //     setStoredValue({
+        //         punchInData:punchInData,
+        //         punch_in_sync_id:'offline'});
+        //     setIsPunchInBtnDisable(!isPunchInBtnDisable);
+        // } else {
             props.actions.punchIn(req);
-        }
+       // }
         
 
     }
@@ -136,20 +136,20 @@ const AttendanceComponent = (props) => {
             datetime: dateFormat(new Date()),
             sync_id: localstoreVal.punch_in_sync_id
         }
-        if(isConnected === false){
-            let punchOutData  = [];
-            if(localstoreVal?.punchOutData){
-                punchOutData = [...localstoreVal?.punchOutData];
-            }
-            punchOutData.push(req);
-            setStoredValue({
-                punchOutData:punchOutData,
-                punch_in_sync_id:''
-            });
-            setIsPunchInBtnDisable(!isPunchInBtnDisable);
-         } else {
+        // if(isConnected === false){
+        //     let punchOutData  = [];
+        //     if(localstoreVal?.punchOutData){
+        //         punchOutData = [...localstoreVal?.punchOutData];
+        //     }
+        //     punchOutData.push(req);
+        //     setStoredValue({
+        //         punchOutData:punchOutData,
+        //         punch_in_sync_id:''
+        //     });
+        //     setIsPunchInBtnDisable(!isPunchInBtnDisable);
+        //  } else {
             props.actions.punchOut(req);
-        }
+       // }
         
     }
 

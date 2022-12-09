@@ -17,6 +17,8 @@ import com.reactnativecommunity.asyncstorage.AsyncStoragePackage;
 import com.reactnativecommunity.geolocation.GeolocationPackage;
 // @react-native-community/netinfo
 import com.reactnativecommunity.netinfo.NetInfoPackage;
+// react-native-date-picker
+import com.henninghall.date_picker.DatePickerPackage;
 // react-native-device-info
 import com.learnium.RNDeviceInfo.RNDeviceInfo;
 // react-native-geolocation-service
@@ -83,6 +85,7 @@ public class PackageList {
       new AsyncStoragePackage(),
       new GeolocationPackage(),
       new NetInfoPackage(),
+      new DatePickerPackage(),
       new RNDeviceInfo(),
       new RNFusedLocationPackage(),
       new RNGestureHandlerPackage(),

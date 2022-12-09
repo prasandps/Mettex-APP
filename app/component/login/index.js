@@ -140,15 +140,15 @@ const LoginComponent = (props) => {
         if (isValid()) {
             let localstorage = await getStoredValue();
             if (localstorage?.auth_key && localstorage?.auth_key != '') {
-                if(isConnected === false && localstorage?.sessionkey != ''){
-                    props.actions.validSession(true);
-                } else {
+                // if(isConnected === false && localstorage?.sessionkey != ''){
+                //     props.actions.validSession(true);
+                // } else {
                     props.actions.login({ 
                         username: state.username, 
                         password: state.password,
                         authkey:localstorage.auth_key
                     });
-                }
+               // }
                
             } else {
                 let req = {

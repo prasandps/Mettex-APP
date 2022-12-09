@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.mettexlab.app-mergeDebugResources-32:/values-mk/values-mk.xml",
+            "outputFile": "com.mettexlab.app-mergeDebugResources-33:/values-mk/values-mk.xml",
             "map": [
                 {
                     "source": "/Users/senthilkumar/.gradle/caches/transforms-3/ea51e9565e00dfcc01c5228a0311af20/transformed/jetified-play-services-basement-18.1.0/res/values-mk/values.xml",

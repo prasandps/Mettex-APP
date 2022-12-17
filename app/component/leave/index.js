@@ -37,6 +37,7 @@ const LeaveComponent = (props) => {
   const [toDateOpen, setToDateOpen] = useState(false);
   const [selectDayLeaveTypes, setSelectDayLeaveTypes] = useState(leaveDayType);
   const [selectLeaveType, setSelectLeaveType] = useState(null);
+  const [isApplyLeave, setIsApplyLeave] = useState(false)
 
   const onPressDayLeaveTypsButton = (selectLeaveTypeArray) => {
     setSelectLeaveType(selectLeaveTypeArray);
@@ -44,7 +45,7 @@ const LeaveComponent = (props) => {
 
   return (
     <ScrollView>
-      <Modal isVisible={true} style={{ backgroundColor: "#fff" }}>
+      <Modal isVisible={isApplyLeave} style={{ backgroundColor: "#fff" }}>
         <View style={{ flex: 0.9, height: "100%" }}>
           <Card>
             <Card.Title>Apply Leave</Card.Title>
@@ -67,7 +68,7 @@ const LeaveComponent = (props) => {
                   date={fromDate}
                   onConfirm={(date) => {
                     setOpen(false);
-                    setFromDate(fromDate);
+                    setFromDate(date);
                   }}
                   onCancel={() => {
                     setOpen(false);
@@ -90,7 +91,7 @@ const LeaveComponent = (props) => {
                   date={toDate}
                   onConfirm={(date) => {
                     setToDateOpen(false);
-                    setToDate(toDate);
+                    setToDate(date);
                   }}
                   onCancel={() => {
                     setToDateOpen(false);
@@ -142,6 +143,7 @@ const LeaveComponent = (props) => {
                   buttonStyle={{
                     backgroundColor: "#333",
                   }}
+                  onPress={()=>setIsApplyLeave(!isApplyLeave)}
                 />
               </View>
               <View style={styles.btn}>
@@ -156,7 +158,7 @@ const LeaveComponent = (props) => {
 
       <Button
         title="Apply Leave"
-        onPress={() => props.navigation.navigate("Leave3")}
+        onPress={() => setIsApplyLeave(!isApplyLeave)}
       />
     </ScrollView>
   );

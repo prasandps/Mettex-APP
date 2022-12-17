@@ -25,8 +25,8 @@ const LoginComponent = (props) => {
     const isConnected = useIsConnected();
 
     const [state, setState] = useState({
-        username: '',//'6208113',
-        password: '',//'1234567',
+        username: '6208113',
+        password: '1234567',
         error: ''
     });
 

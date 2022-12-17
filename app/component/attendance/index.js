@@ -60,8 +60,8 @@ const AttendanceComponent = (props) => {
     const getLocalStoreVal = async () => {
         let localstoreVal = await getStoredValue();
         if (localstoreVal?.punch_in_sync_id != '' &&
-            typeof localstoreVal?.punch_in_sync_id != 'undefined' && isPunchInBtnDisable == false) {
-            setIsPunchInBtnDisable(!isPunchInBtnDisable)
+            typeof localstoreVal?.punch_in_sync_id != 'undefined' && localstoreVal.isPunchInBtnDisable == true) {
+            setIsPunchInBtnDisable(isPunchInBtnDisable)
         } else if (isPunchInBtnDisable == true) {
             setIsPunchInBtnDisable(!isPunchInBtnDisable)
         }
@@ -155,15 +155,16 @@ const AttendanceComponent = (props) => {
 
     useEffect(() => {
         if (props?.punchInData && props?.punchInData?.status == 'success') {
+            setStoredValue({ punch_in_sync_id: props?.punchInData?.sync_id || '',
+            isPunchInBtnDisable:true });
             setIsPunchInBtnDisable(!isPunchInBtnDisable);
-            setStoredValue({ punch_in_sync_id: props?.punchInData?.sync_id || '' });
         }
     }, [props.punchInData])
 
     useEffect(() => {
         if (props?.punchOutData && props?.punchOutData?.status == 'success') {
             setIsPunchInBtnDisable(!isPunchInBtnDisable);
-            setStoredValue({ punch_in_sync_id: '' });
+            setStoredValue({ punch_in_sync_id: '', isPunchInBtnDisable:false });
         }
     }, [props.punchOutData])
 

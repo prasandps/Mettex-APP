@@ -7,12 +7,15 @@ INJECTED from /Users/senthilkumar/Desktop/projects/react-native/myproject/androi
 MERGED from [:react-native-splash-screen] /Users/senthilkumar/Desktop/projects/react-native/myproject/node_modules/react-native-splash-screen/android/build/intermediates/merged_manifest/release/AndroidManifest.xml:2:1-9:12
 MERGED from [:react-native-async-storage_async-storage] /Users/senthilkumar/Desktop/projects/react-native/myproject/node_modules/@react-native-async-storage/async-storage/android/build/intermediates/merged_manifest/release/AndroidManifest.xml:2:1-9:12
 MERGED from [:react-native-community_geolocation] /Users/senthilkumar/Desktop/projects/react-native/myproject/node_modules/@react-native-community/geolocation/android/build/intermediates/merged_manifest/release/AndroidManifest.xml:2:1-9:12
+MERGED from [:react-native-community_netinfo] /Users/senthilkumar/Desktop/projects/react-native/myproject/node_modules/@react-native-community/netinfo/android/build/intermediates/merged_manifest/release/AndroidManifest.xml:2:1-12:12
+MERGED from [:react-native-date-picker] /Users/senthilkumar/Desktop/projects/react-native/myproject/node_modules/react-native-date-picker/android/build/intermediates/merged_manifest/release/AndroidManifest.xml:2:1-9:12
 MERGED from [:react-native-device-info] /Users/senthilkumar/Desktop/projects/react-native/myproject/node_modules/react-native-device-info/android/build/intermediates/merged_manifest/release/AndroidManifest.xml:2:1-9:12
 MERGED from [:react-native-geolocation-service] /Users/senthilkumar/Desktop/projects/react-native/myproject/node_modules/react-native-geolocation-service/android/build/intermediates/merged_manifest/release/AndroidManifest.xml:2:1-9:12
 MERGED from [:react-native-gesture-handler] /Users/senthilkumar/Desktop/projects/react-native/myproject/node_modules/react-native-gesture-handler/android/build/intermediates/merged_manifest/release/AndroidManifest.xml:2:1-9:12
 MERGED from [:react-native-maps] /Users/senthilkumar/Desktop/projects/react-native/myproject/node_modules/react-native-maps/android/build/intermediates/merged_manifest/release/AndroidManifest.xml:2:1-9:12
 MERGED from [:react-native-safe-area-context] /Users/senthilkumar/Desktop/projects/react-native/myproject/node_modules/react-native-safe-area-context/android/build/intermediates/merged_manifest/release/AndroidManifest.xml:2:1-9:12
 MERGED from [:react-native-screens] /Users/senthilkumar/Desktop/projects/react-native/myproject/node_modules/react-native-screens/android/build/intermediates/merged_manifest/release/AndroidManifest.xml:2:1-9:12
+MERGED from [:react-native-svg] /Users/senthilkumar/Desktop/projects/react-native/myproject/node_modules/react-native-svg/android/build/intermediates/merged_manifest/release/AndroidManifest.xml:2:1-9:12
 MERGED from [:react-native-vector-icons] /Users/senthilkumar/Desktop/projects/react-native/myproject/node_modules/react-native-vector-icons/android/build/intermediates/merged_manifest/release/AndroidManifest.xml:2:1-9:12
 MERGED from [com.facebook.react:react-native:0.70.6] /Users/senthilkumar/.gradle/caches/transforms-3/ba7fa702a3c1017659fd2beae850ff2f/transformed/jetified-react-native-0.70.6-release/AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /Users/senthilkumar/.gradle/caches/transforms-3/4aa3daa4c119e5ebf154ad11d072f485/transformed/swiperefreshlayout-1.0.0/AndroidManifest.xml:17:1-22:12
@@ -83,6 +86,8 @@ MERGED from [androidx.arch.core:core-runtime:2.1.0] /Users/senthilkumar/.gradle/
 MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/senthilkumar/.gradle/caches/transforms-3/806eac4852f109b813bc70ce28c2490e/transformed/documentfile-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/senthilkumar/.gradle/caches/transforms-3/c5631a9198c91087e2781cc099ce3c49/transformed/localbroadcastmanager-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.print:print:1.0.0] /Users/senthilkumar/.gradle/caches/transforms-3/0bf5b5943b3bd88b7b8a598e0e83c637/transformed/print-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.github.henninghall:numberpickerview:v1.1.5] /Users/senthilkumar/.gradle/caches/transforms-3/9b30bb2ac9392326984e629bec4936dc/transformed/jetified-numberpickerview-v1.1.5/AndroidManifest.xml:2:1-11:12
+MERGED from [net.time4j:time4j-android:4.8-2021a] /Users/senthilkumar/.gradle/caches/transforms-3/c19b4058e4af20c34268b7b0e48d5683/transformed/jetified-time4j-android-4.8-2021a/AndroidManifest.xml:2:1-13:12
 MERGED from [com.android.installreferrer:installreferrer:1.1.2] /Users/senthilkumar/.gradle/caches/transforms-3/318328e3183509abffbee01fc4efd067/transformed/jetified-installreferrer-1.1.2/AndroidManifest.xml:2:1-13:12
 MERGED from [com.google.maps.android:android-maps-utils:0.5] /Users/senthilkumar/.gradle/caches/transforms-3/e19065b9fa753ec5f5259d32b0d0c9cc/transformed/jetified-android-maps-utils-0.5/AndroidManifest.xml:2:1-13:12
 MERGED from [com.facebook.fresco:fbcore:2.5.0] /Users/senthilkumar/.gradle/caches/transforms-3/45af113d889b5bbfb6fd11bbb9367944/transformed/jetified-fbcore-2.5.0/AndroidManifest.xml:2:1-9:12
@@ -118,6 +123,8 @@ ADDED from /Users/senthilkumar/Desktop/projects/react-native/myproject/android/a
 		ADDED from /Users/senthilkumar/Desktop/projects/react-native/myproject/android/app/src/main/AndroidManifest.xml:5:22-72
 uses-permission#android.permission.ACCESS_NETWORK_STATE
 ADDED from /Users/senthilkumar/Desktop/projects/react-native/myproject/android/app/src/main/AndroidManifest.xml:6:5-79
+MERGED from [:react-native-community_netinfo] /Users/senthilkumar/Desktop/projects/react-native/myproject/node_modules/@react-native-community/netinfo/android/build/intermediates/merged_manifest/release/AndroidManifest.xml:9:5-79
+MERGED from [:react-native-community_netinfo] /Users/senthilkumar/Desktop/projects/react-native/myproject/node_modules/@react-native-community/netinfo/android/build/intermediates/merged_manifest/release/AndroidManifest.xml:9:5-79
 MERGED from [com.google.android.gms:play-services-maps:18.0.2] /Users/senthilkumar/.gradle/caches/transforms-3/5b94eed69c74e072e7c17c8facb87462/transformed/jetified-play-services-maps-18.0.2/AndroidManifest.xml:23:5-79
 MERGED from [com.google.android.gms:play-services-maps:18.0.2] /Users/senthilkumar/.gradle/caches/transforms-3/5b94eed69c74e072e7c17c8facb87462/transformed/jetified-play-services-maps-18.0.2/AndroidManifest.xml:23:5-79
 MERGED from [androidx.work:work-runtime:2.7.1] /Users/senthilkumar/.gradle/caches/transforms-3/3bc811facf50ede55bc8298072e0374d/transformed/work-runtime-2.7.1/AndroidManifest.xml:26:5-79
@@ -126,6 +133,8 @@ MERGED from [androidx.work:work-runtime:2.7.1] /Users/senthilkumar/.gradle/cache
 		ADDED from /Users/senthilkumar/Desktop/projects/react-native/myproject/android/app/src/main/AndroidManifest.xml:6:22-76
 uses-permission#android.permission.ACCESS_WIFI_STATE
 ADDED from /Users/senthilkumar/Desktop/projects/react-native/myproject/android/app/src/main/AndroidManifest.xml:7:5-76
+MERGED from [:react-native-community_netinfo] /Users/senthilkumar/Desktop/projects/react-native/myproject/node_modules/@react-native-community/netinfo/android/build/intermediates/merged_manifest/release/AndroidManifest.xml:10:5-76
+MERGED from [:react-native-community_netinfo] /Users/senthilkumar/Desktop/projects/react-native/myproject/node_modules/@react-native-community/netinfo/android/build/intermediates/merged_manifest/release/AndroidManifest.xml:10:5-76
 	android:name
 		ADDED from /Users/senthilkumar/Desktop/projects/react-native/myproject/android/app/src/main/AndroidManifest.xml:7:22-73
 uses-permission#android.permission.ACCESS_COARSE_LOCATION
@@ -176,6 +185,8 @@ MERGED from [androidx.room:room-runtime:2.2.5] /Users/senthilkumar/.gradle/cache
 MERGED from [androidx.room:room-runtime:2.2.5] /Users/senthilkumar/.gradle/caches/transforms-3/d6dec416bb888634412be1a5a950fd3c/transformed/room-runtime-2.2.5/AndroidManifest.xml:24:5-29:19
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/senthilkumar/.gradle/caches/transforms-3/b6f3e7651a74a74278e1a753048bf61a/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:24:5-25:19
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/senthilkumar/.gradle/caches/transforms-3/b6f3e7651a74a74278e1a753048bf61a/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:24:5-25:19
+MERGED from [net.time4j:time4j-android:4.8-2021a] /Users/senthilkumar/.gradle/caches/transforms-3/c19b4058e4af20c34268b7b0e48d5683/transformed/jetified-time4j-android-4.8-2021a/AndroidManifest.xml:11:5-20
+MERGED from [net.time4j:time4j-android:4.8-2021a] /Users/senthilkumar/.gradle/caches/transforms-3/c19b4058e4af20c34268b7b0e48d5683/transformed/jetified-time4j-android-4.8-2021a/AndroidManifest.xml:11:5-20
 MERGED from [com.android.installreferrer:installreferrer:1.1.2] /Users/senthilkumar/.gradle/caches/transforms-3/318328e3183509abffbee01fc4efd067/transformed/jetified-installreferrer-1.1.2/AndroidManifest.xml:11:5-20
 MERGED from [com.android.installreferrer:installreferrer:1.1.2] /Users/senthilkumar/.gradle/caches/transforms-3/318328e3183509abffbee01fc4efd067/transformed/jetified-installreferrer-1.1.2/AndroidManifest.xml:11:5-20
 MERGED from [com.google.maps.android:android-maps-utils:0.5] /Users/senthilkumar/.gradle/caches/transforms-3/e19065b9fa753ec5f5259d32b0d0c9cc/transformed/jetified-android-maps-utils-0.5/AndroidManifest.xml:7:5-11:19
@@ -244,6 +255,10 @@ MERGED from [:react-native-async-storage_async-storage] /Users/senthilkumar/Desk
 MERGED from [:react-native-async-storage_async-storage] /Users/senthilkumar/Desktop/projects/react-native/myproject/node_modules/@react-native-async-storage/async-storage/android/build/intermediates/merged_manifest/release/AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-community_geolocation] /Users/senthilkumar/Desktop/projects/react-native/myproject/node_modules/@react-native-community/geolocation/android/build/intermediates/merged_manifest/release/AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-community_geolocation] /Users/senthilkumar/Desktop/projects/react-native/myproject/node_modules/@react-native-community/geolocation/android/build/intermediates/merged_manifest/release/AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-community_netinfo] /Users/senthilkumar/Desktop/projects/react-native/myproject/node_modules/@react-native-community/netinfo/android/build/intermediates/merged_manifest/release/AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-community_netinfo] /Users/senthilkumar/Desktop/projects/react-native/myproject/node_modules/@react-native-community/netinfo/android/build/intermediates/merged_manifest/release/AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-date-picker] /Users/senthilkumar/Desktop/projects/react-native/myproject/node_modules/react-native-date-picker/android/build/intermediates/merged_manifest/release/AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-date-picker] /Users/senthilkumar/Desktop/projects/react-native/myproject/node_modules/react-native-date-picker/android/build/intermediates/merged_manifest/release/AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-device-info] /Users/senthilkumar/Desktop/projects/react-native/myproject/node_modules/react-native-device-info/android/build/intermediates/merged_manifest/release/AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-device-info] /Users/senthilkumar/Desktop/projects/react-native/myproject/node_modules/react-native-device-info/android/build/intermediates/merged_manifest/release/AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-geolocation-service] /Users/senthilkumar/Desktop/projects/react-native/myproject/node_modules/react-native-geolocation-service/android/build/intermediates/merged_manifest/release/AndroidManifest.xml:5:5-7:41
@@ -256,6 +271,8 @@ MERGED from [:react-native-safe-area-context] /Users/senthilkumar/Desktop/projec
 MERGED from [:react-native-safe-area-context] /Users/senthilkumar/Desktop/projects/react-native/myproject/node_modules/react-native-safe-area-context/android/build/intermediates/merged_manifest/release/AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-screens] /Users/senthilkumar/Desktop/projects/react-native/myproject/node_modules/react-native-screens/android/build/intermediates/merged_manifest/release/AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-screens] /Users/senthilkumar/Desktop/projects/react-native/myproject/node_modules/react-native-screens/android/build/intermediates/merged_manifest/release/AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-svg] /Users/senthilkumar/Desktop/projects/react-native/myproject/node_modules/react-native-svg/android/build/intermediates/merged_manifest/release/AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-svg] /Users/senthilkumar/Desktop/projects/react-native/myproject/node_modules/react-native-svg/android/build/intermediates/merged_manifest/release/AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-vector-icons] /Users/senthilkumar/Desktop/projects/react-native/myproject/node_modules/react-native-vector-icons/android/build/intermediates/merged_manifest/release/AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-vector-icons] /Users/senthilkumar/Desktop/projects/react-native/myproject/node_modules/react-native-vector-icons/android/build/intermediates/merged_manifest/release/AndroidManifest.xml:5:5-7:41
 MERGED from [com.facebook.react:react-native:0.70.6] /Users/senthilkumar/.gradle/caches/transforms-3/ba7fa702a3c1017659fd2beae850ff2f/transformed/jetified-react-native-0.70.6-release/AndroidManifest.xml:5:5-7:41
@@ -396,6 +413,10 @@ MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/
 MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/senthilkumar/.gradle/caches/transforms-3/c5631a9198c91087e2781cc099ce3c49/transformed/localbroadcastmanager-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.print:print:1.0.0] /Users/senthilkumar/.gradle/caches/transforms-3/0bf5b5943b3bd88b7b8a598e0e83c637/transformed/print-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.print:print:1.0.0] /Users/senthilkumar/.gradle/caches/transforms-3/0bf5b5943b3bd88b7b8a598e0e83c637/transformed/print-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.github.henninghall:numberpickerview:v1.1.5] /Users/senthilkumar/.gradle/caches/transforms-3/9b30bb2ac9392326984e629bec4936dc/transformed/jetified-numberpickerview-v1.1.5/AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.henninghall:numberpickerview:v1.1.5] /Users/senthilkumar/.gradle/caches/transforms-3/9b30bb2ac9392326984e629bec4936dc/transformed/jetified-numberpickerview-v1.1.5/AndroidManifest.xml:7:5-9:41
+MERGED from [net.time4j:time4j-android:4.8-2021a] /Users/senthilkumar/.gradle/caches/transforms-3/c19b4058e4af20c34268b7b0e48d5683/transformed/jetified-time4j-android-4.8-2021a/AndroidManifest.xml:7:5-9:41
+MERGED from [net.time4j:time4j-android:4.8-2021a] /Users/senthilkumar/.gradle/caches/transforms-3/c19b4058e4af20c34268b7b0e48d5683/transformed/jetified-time4j-android-4.8-2021a/AndroidManifest.xml:7:5-9:41
 MERGED from [com.android.installreferrer:installreferrer:1.1.2] /Users/senthilkumar/.gradle/caches/transforms-3/318328e3183509abffbee01fc4efd067/transformed/jetified-installreferrer-1.1.2/AndroidManifest.xml:5:5-7:41
 MERGED from [com.android.installreferrer:installreferrer:1.1.2] /Users/senthilkumar/.gradle/caches/transforms-3/318328e3183509abffbee01fc4efd067/transformed/jetified-installreferrer-1.1.2/AndroidManifest.xml:5:5-7:41
 MERGED from [com.google.maps.android:android-maps-utils:0.5] /Users/senthilkumar/.gradle/caches/transforms-3/e19065b9fa753ec5f5259d32b0d0c9cc/transformed/jetified-android-maps-utils-0.5/AndroidManifest.xml:5:5-43

@@ -19,6 +19,7 @@ MERGED from [:react-native-gesture-handler] /Users/senthilkumar/Desktop/projects
 MERGED from [:react-native-maps] /Users/senthilkumar/Desktop/projects/react-native/myproject/node_modules/react-native-maps/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-9:12
 MERGED from [:react-native-safe-area-context] /Users/senthilkumar/Desktop/projects/react-native/myproject/node_modules/react-native-safe-area-context/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-9:12
 MERGED from [:react-native-screens] /Users/senthilkumar/Desktop/projects/react-native/myproject/node_modules/react-native-screens/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-9:12
+MERGED from [:react-native-svg] /Users/senthilkumar/Desktop/projects/react-native/myproject/node_modules/react-native-svg/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-9:12
 MERGED from [:react-native-vector-icons] /Users/senthilkumar/Desktop/projects/react-native/myproject/node_modules/react-native-vector-icons/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-9:12
 MERGED from [com.facebook.react:react-native:0.70.6] /Users/senthilkumar/.gradle/caches/transforms-3/0b825f9a3cd84cf1738e48fbfed11fea/transformed/jetified-react-native-0.70.6-debug/AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /Users/senthilkumar/.gradle/caches/transforms-3/4aa3daa4c119e5ebf154ad11d072f485/transformed/swiperefreshlayout-1.0.0/AndroidManifest.xml:17:1-22:12
@@ -301,6 +302,8 @@ MERGED from [:react-native-safe-area-context] /Users/senthilkumar/Desktop/projec
 MERGED from [:react-native-safe-area-context] /Users/senthilkumar/Desktop/projects/react-native/myproject/node_modules/react-native-safe-area-context/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-screens] /Users/senthilkumar/Desktop/projects/react-native/myproject/node_modules/react-native-screens/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-screens] /Users/senthilkumar/Desktop/projects/react-native/myproject/node_modules/react-native-screens/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-svg] /Users/senthilkumar/Desktop/projects/react-native/myproject/node_modules/react-native-svg/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-svg] /Users/senthilkumar/Desktop/projects/react-native/myproject/node_modules/react-native-svg/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-vector-icons] /Users/senthilkumar/Desktop/projects/react-native/myproject/node_modules/react-native-vector-icons/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-vector-icons] /Users/senthilkumar/Desktop/projects/react-native/myproject/node_modules/react-native-vector-icons/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [com.facebook.react:react-native:0.70.6] /Users/senthilkumar/.gradle/caches/transforms-3/0b825f9a3cd84cf1738e48fbfed11fea/transformed/jetified-react-native-0.70.6-debug/AndroidManifest.xml:5:5-7:41

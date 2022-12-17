@@ -5,8 +5,7 @@ import { ScrollView, View, Button } from "react-native";
 import DatePicker from 'react-native-date-picker';
 import Modal from "react-native-modal";
 import { format, compareAsc } from 'date-fns';
-import { Icon } from 'react-native-elements'
-import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome'
+
 
 const LeaveComponent = (props) => {
     const [date, setDate] = useState(new Date())
@@ -36,7 +35,7 @@ const LeaveComponent = (props) => {
                                 setOpen(false)
                                 }}
                             />
-                   <FontAwesomeIcon icon={['fab', 'google']} />
+                   
                             <Button title="Open" onPress={() => setOpen(true)} />
                         </View>
                         

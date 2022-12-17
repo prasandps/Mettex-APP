@@ -1,35 +1,39 @@
 [
     {
-        "merged": "com.mettexlab.app-merged_res-35:/mipmap-hdpi_launch_screen.png.flat",
-        "source": "com.mettexlab.app-main-37:/mipmap-hdpi/launch_screen.png"
+        "merged": "/Users/senthilkumar/.gradle/daemon/7.5.1/com.mettexlab.app-merged_res-35:/mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "/Users/senthilkumar/.gradle/daemon/7.5.1/com.mettexlab.app-main-37:/mipmap-xxxhdpi/ic_launcher.png"
     },
     {
-        "merged": "com.mettexlab.app-merged_res-35:/mipmap-xhdpi_ic_launcher.png.flat",
-        "source": "com.mettexlab.app-main-37:/mipmap-xhdpi/ic_launcher.png"
+        "merged": "/Users/senthilkumar/.gradle/daemon/7.5.1/com.mettexlab.app-merged_res-35:/mipmap-mdpi_ic_launcher_round.png.flat",
+        "source": "/Users/senthilkumar/.gradle/daemon/7.5.1/com.mettexlab.app-main-37:/mipmap-mdpi/ic_launcher_round.png"
     },
     {
-        "merged": "com.mettexlab.app-merged_res-35:/drawable_launch_screen.png.flat",
-        "source": "com.mettexlab.app-main-37:/drawable/launch_screen.png"
+        "merged": "/Users/senthilkumar/.gradle/daemon/7.5.1/com.mettexlab.app-merged_res-35:/mipmap-hdpi_ic_launcher_foreground.png.flat",
+        "source": "/Users/senthilkumar/.gradle/daemon/7.5.1/com.mettexlab.app-main-37:/mipmap-hdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "/Users/senthilkumar/.gradle/daemon/7.5.1/com.mettexlab.app-merged_res-35:/drawable_rn_edit_text_material.xml.flat",
+        "source": "/Users/senthilkumar/.gradle/daemon/7.5.1/com.mettexlab.app-main-37:/drawable/rn_edit_text_material.xml"
+    },
+    {
+        "merged": "/Users/senthilkumar/.gradle/daemon/7.5.1/com.mettexlab.app-merged_res-35:/mipmap-xhdpi_launch_screen.png.flat",
+        "source": "/Users/senthilkumar/.gradle/daemon/7.5.1/com.mettexlab.app-main-37:/mipmap-xhdpi/launch_screen.png"
     },
     {
         "merged": "com.mettexlab.app-merged_res-35:/mipmap-xxxhdpi_ic_launcher_round.png.flat",
         "source": "com.mettexlab.app-main-37:/mipmap-xxxhdpi/ic_launcher_round.png"
     },
     {
+        "merged": "/Users/senthilkumar/.gradle/daemon/7.5.1/com.mettexlab.app-merged_res-35:/mipmap-hdpi_ic_launcher.png.flat",
+        "source": "/Users/senthilkumar/.gradle/daemon/7.5.1/com.mettexlab.app-main-37:/mipmap-hdpi/ic_launcher.png"
+    },
+    {
         "merged": "com.mettexlab.app-merged_res-35:/mipmap-mdpi_ic_launcher.png.flat",
         "source": "com.mettexlab.app-main-37:/mipmap-mdpi/ic_launcher.png"
     },
     {
-        "merged": "com.mettexlab.app-merged_res-35:/mipmap-xxhdpi_launch_screen.png.flat",
-        "source": "com.mettexlab.app-main-37:/mipmap-xxhdpi/launch_screen.png"
-    },
-    {
-        "merged": "com.mettexlab.app-merged_res-35:/mipmap-xhdpi_launch_screen.png.flat",
-        "source": "com.mettexlab.app-main-37:/mipmap-xhdpi/launch_screen.png"
-    },
-    {
-        "merged": "com.mettexlab.app-merged_res-35:/mipmap-xxxhdpi_launch_screen.png.flat",
-        "source": "com.mettexlab.app-main-37:/mipmap-xxxhdpi/launch_screen.png"
+        "merged": "/Users/senthilkumar/.gradle/daemon/7.5.1/com.mettexlab.app-merged_res-35:/layout_launch_screen.xml.flat",
+        "source": "/Users/senthilkumar/.gradle/daemon/7.5.1/com.mettexlab.app-main-37:/layout/launch_screen.xml"
     },
     {
         "merged": "com.mettexlab.app-merged_res-35:/mipmap-xhdpi_ic_launcher_round.png.flat",
@@ -40,28 +44,116 @@
         "source": "com.mettexlab.app-main-37:/mipmap-mdpi/ic_launcher_round.png"
     },
     {
-        "merged": "com.mettexlab.app-merged_res-35:/drawable_rn_edit_text_material.xml.flat",
-        "source": "com.mettexlab.app-main-37:/drawable/rn_edit_text_material.xml"
+        "merged": "/Users/senthilkumar/.gradle/daemon/7.5.1/com.mettexlab.app-merged_res-35:/mipmap-mdpi_ic_launcher_foreground.png.flat",
+        "source": "/Users/senthilkumar/.gradle/daemon/7.5.1/com.mettexlab.app-main-37:/mipmap-mdpi/ic_launcher_foreground.png"
     },
     {
-        "merged": "com.mettexlab.app-merged_res-35:/layout_launch_screen.xml.flat",
-        "source": "com.mettexlab.app-main-37:/layout/launch_screen.xml"
+        "merged": "/Users/senthilkumar/.gradle/daemon/7.5.1/com.mettexlab.app-merged_res-35:/mipmap-hdpi_launch_screen.png.flat",
+        "source": "/Users/senthilkumar/.gradle/daemon/7.5.1/com.mettexlab.app-main-37:/mipmap-hdpi/launch_screen.png"
+    },
+    {
+        "merged": "/Users/senthilkumar/.gradle/daemon/7.5.1/com.mettexlab.app-merged_res-35:/drawable_launch_screen.png.flat",
+        "source": "/Users/senthilkumar/.gradle/daemon/7.5.1/com.mettexlab.app-main-37:/drawable/launch_screen.png"
+    },
+    {
+        "merged": "/Users/senthilkumar/.gradle/daemon/7.5.1/com.mettexlab.app-merged_res-35:/mipmap-xxhdpi_ic_launcher_foreground.png.flat",
+        "source": "/Users/senthilkumar/.gradle/daemon/7.5.1/com.mettexlab.app-main-37:/mipmap-xxhdpi/ic_launcher_foreground.png"
     },
     {
         "merged": "com.mettexlab.app-merged_res-35:/mipmap-hdpi_ic_launcher.png.flat",
         "source": "com.mettexlab.app-main-37:/mipmap-hdpi/ic_launcher.png"
     },
     {
-        "merged": "com.mettexlab.app-merged_res-35:/mipmap-mdpi_launch_screen.png.flat",
-        "source": "com.mettexlab.app-main-37:/mipmap-mdpi/launch_screen.png"
+        "merged": "com.mettexlab.app-merged_res-35:/mipmap-mdpi_ic_launcher_foreground.png.flat",
+        "source": "com.mettexlab.app-main-37:/mipmap-mdpi/ic_launcher_foreground.png"
     },
     {
-        "merged": "com.mettexlab.app-merged_res-35:/mipmap-xxhdpi_ic_launcher.png.flat",
-        "source": "com.mettexlab.app-main-37:/mipmap-xxhdpi/ic_launcher.png"
+        "merged": "com.mettexlab.app-merged_res-35:/mipmap-hdpi_ic_launcher_foreground.png.flat",
+        "source": "com.mettexlab.app-main-37:/mipmap-hdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "/Users/senthilkumar/.gradle/daemon/7.5.1/com.mettexlab.app-merged_res-35:/mipmap-mdpi_launch_screen.png.flat",
+        "source": "/Users/senthilkumar/.gradle/daemon/7.5.1/com.mettexlab.app-main-37:/mipmap-mdpi/launch_screen.png"
+    },
+    {
+        "merged": "/Users/senthilkumar/.gradle/daemon/7.5.1/com.mettexlab.app-merged_res-35:/mipmap-mdpi_ic_launcher.png.flat",
+        "source": "/Users/senthilkumar/.gradle/daemon/7.5.1/com.mettexlab.app-main-37:/mipmap-mdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/senthilkumar/.gradle/daemon/7.5.1/com.mettexlab.app-merged_res-35:/mipmap-hdpi_ic_launcher_round.png.flat",
+        "source": "/Users/senthilkumar/.gradle/daemon/7.5.1/com.mettexlab.app-main-37:/mipmap-hdpi/ic_launcher_round.png"
     },
     {
         "merged": "com.mettexlab.app-merged_res-35:/mipmap-xxhdpi_ic_launcher_round.png.flat",
         "source": "com.mettexlab.app-main-37:/mipmap-xxhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "/Users/senthilkumar/.gradle/daemon/7.5.1/com.mettexlab.app-merged_res-35:/mipmap-xxxhdpi_launch_screen.png.flat",
+        "source": "/Users/senthilkumar/.gradle/daemon/7.5.1/com.mettexlab.app-main-37:/mipmap-xxxhdpi/launch_screen.png"
+    },
+    {
+        "merged": "com.mettexlab.app-merged_res-35:/mipmap-xhdpi_ic_launcher_foreground.png.flat",
+        "source": "com.mettexlab.app-main-37:/mipmap-xhdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "/Users/senthilkumar/.gradle/daemon/7.5.1/com.mettexlab.app-merged_res-35:/mipmap-xxhdpi_ic_launcher_round.png.flat",
+        "source": "/Users/senthilkumar/.gradle/daemon/7.5.1/com.mettexlab.app-main-37:/mipmap-xxhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.mettexlab.app-merged_res-35:/mipmap-xxhdpi_ic_launcher_foreground.png.flat",
+        "source": "com.mettexlab.app-main-37:/mipmap-xxhdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "/Users/senthilkumar/.gradle/daemon/7.5.1/com.mettexlab.app-merged_res-35:/mipmap-ldpi_ic_launcher.png.flat",
+        "source": "/Users/senthilkumar/.gradle/daemon/7.5.1/com.mettexlab.app-main-37:/mipmap-ldpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.mettexlab.app-merged_res-35:/mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "com.mettexlab.app-main-37:/mipmap-xhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/senthilkumar/.gradle/daemon/7.5.1/com.mettexlab.app-merged_res-35:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "/Users/senthilkumar/.gradle/daemon/7.5.1/com.mettexlab.app-main-37:/mipmap-anydpi-v26/ic_launcher_round.xml"
+    },
+    {
+        "merged": "/Users/senthilkumar/.gradle/daemon/7.5.1/com.mettexlab.app-merged_res-35:/mipmap-xxhdpi_launch_screen.png.flat",
+        "source": "/Users/senthilkumar/.gradle/daemon/7.5.1/com.mettexlab.app-main-37:/mipmap-xxhdpi/launch_screen.png"
+    },
+    {
+        "merged": "/Users/senthilkumar/.gradle/daemon/7.5.1/com.mettexlab.app-merged_res-35:/mipmap-xhdpi_ic_launcher_round.png.flat",
+        "source": "/Users/senthilkumar/.gradle/daemon/7.5.1/com.mettexlab.app-main-37:/mipmap-xhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "/Users/senthilkumar/.gradle/daemon/7.5.1/com.mettexlab.app-merged_res-35:/mipmap-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "/Users/senthilkumar/.gradle/daemon/7.5.1/com.mettexlab.app-main-37:/mipmap-xxxhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "/Users/senthilkumar/.gradle/daemon/7.5.1/com.mettexlab.app-merged_res-35:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "/Users/senthilkumar/.gradle/daemon/7.5.1/com.mettexlab.app-main-37:/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "com.mettexlab.app-merged_res-35:/mipmap-xxxhdpi_ic_launcher_foreground.png.flat",
+        "source": "com.mettexlab.app-main-37:/mipmap-xxxhdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "/Users/senthilkumar/.gradle/daemon/7.5.1/com.mettexlab.app-merged_res-35:/mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "/Users/senthilkumar/.gradle/daemon/7.5.1/com.mettexlab.app-main-37:/mipmap-xhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/senthilkumar/.gradle/daemon/7.5.1/com.mettexlab.app-merged_res-35:/mipmap-xxxhdpi_ic_launcher_foreground.png.flat",
+        "source": "/Users/senthilkumar/.gradle/daemon/7.5.1/com.mettexlab.app-main-37:/mipmap-xxxhdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "/Users/senthilkumar/.gradle/daemon/7.5.1/com.mettexlab.app-merged_res-35:/mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "/Users/senthilkumar/.gradle/daemon/7.5.1/com.mettexlab.app-main-37:/mipmap-xxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/senthilkumar/.gradle/daemon/7.5.1/com.mettexlab.app-merged_res-35:/mipmap-xhdpi_ic_launcher_foreground.png.flat",
+        "source": "/Users/senthilkumar/.gradle/daemon/7.5.1/com.mettexlab.app-main-37:/mipmap-xhdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "com.mettexlab.app-merged_res-35:/mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "com.mettexlab.app-main-37:/mipmap-xxhdpi/ic_launcher.png"
     },
     {
         "merged": "com.mettexlab.app-merged_res-35:/mipmap-hdpi_ic_launcher_round.png.flat",

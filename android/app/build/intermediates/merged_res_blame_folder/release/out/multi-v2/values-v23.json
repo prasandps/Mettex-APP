@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.mettexlab.app-mergeReleaseResources-31:/values-v23/values-v23.xml",
+            "outputFile": "com.mettexlab.app-mergeReleaseResources-32:/values-v23/values-v23.xml",
             "map": [
                 {
                     "source": "/Users/senthilkumar/.gradle/caches/transforms-3/3cb37a6faf29ddf73604c194d6dae8fd/transformed/cardview-1.0.0/res/values-v23/values-v23.xml",

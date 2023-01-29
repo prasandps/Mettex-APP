@@ -12,8 +12,8 @@ const Drawer = createDrawerNavigator();
 const DrawerNavigator = () => {
     
       return( <Drawer.Navigator drawerContent={(props) => <CustomSidebarMenu {...props} />}>
-            {/* <Drawer.Screen name="Home" component={HomeComponent}/> */}
-            {/* <Drawer.Screen name="Attendance" component={AttendanceComponent}/> */}
+            <Drawer.Screen name="Home" component={HomeComponent}/>
+            <Drawer.Screen name="Attendance" component={AttendanceComponent}/>
             {/* <Drawer.Screen name="Claim" component={ClaimComponent}/>
             <Drawer.Screen name="Loan" component={LoanComponent}/>*/}
             <Drawer.Screen name="Leave" component={LeaveComponent}/> 

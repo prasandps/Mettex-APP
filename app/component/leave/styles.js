@@ -7,10 +7,12 @@ const styles = StyleSheet.create({
     dateContainer: {
         // flex: 1,
          flexDirection: 'row',
-         justifyContent:"space-between"
+         justifyContent:"space-between",
+         marginTop:16,
         //  flexWrap: 'wrap',
         // alignItems: 'flex-start' // if you want to fill rows left to right
       },
+      dateTime:{width:"100%"},
       dateItem: {
         width: '50%' // is 50% of container width
       },

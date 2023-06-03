@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.mettexlab.app-mergeDebugResources-33:/values-no/values-no.xml",
+            "outputFile": "com.mettexlab.app-mergeDebugResources-34:/values-no/values-no.xml",
             "map": [
                 {
-                    "source": "/Users/senthilkumar/Desktop/projects/react-native/myproject/node_modules/react-native-date-picker/android/build/intermediates/packaged_res/debug/values-no/values-no.xml",
+                    "source": "/Users/senthilkumar/Desktop/projects/myproject/node_modules/react-native-date-picker/android/build/intermediates/packaged_res/debug/values-no/values-no.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4",

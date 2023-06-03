@@ -11,13 +11,13 @@ import * as actions from "./actions";
 import dateFormat from '../common/dateFormat';
 import Spinner from 'react-native-loading-spinner-overlay/lib';
 import { useIsConnected } from 'react-native-offline';
+import PushNotification from "react-native-push-notification";
 
 
 const AttendanceComponent = (props) => {
 
     const isConnected = useIsConnected();
 
-    console.log("=====> isConnected", isConnected)
 
     const [coordinate, setCoordinate] = useState({
         latitude: 11.1271,
@@ -109,6 +109,14 @@ const AttendanceComponent = (props) => {
             longitude: coordinate.longitude,
             datetime: dateFormat(new Date())
         }
+
+ 
+            PushNotification.localNotification({
+                channelId:"met-tex-lab",
+                title:"Punch In",
+                message:"You have Punch In Successfully. Don't forget to Punch Out."
+            })
+  
         // if(isConnected === false){
         //     let punchInData  = [];
         //     if(localstoreVal?.punchInData){
